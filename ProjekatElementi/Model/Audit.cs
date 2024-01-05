@@ -3,18 +3,25 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ServiceModel;
+using System.Runtime.Serialization;
 
 namespace Model
 {
-    class Audit
+    [DataContract]
+    public class Audit
     {
 
-        public string Vreme { get; set; }
+        [DataMember]
+        public DateTime Vreme { get; set; }
+        [DataMember]
         public string Ime { get; set; }
+        [DataMember]
         public string Lokacija { get; set; }
+        [DataMember]
         public int Br_Redova { get; set; }
 
-        public Audit(string vreme, string ime, string lokacija, int br_Redova)
+        public Audit(DateTime vreme, string ime, string lokacija, int br_Redova)
         {
             Vreme = vreme;
             Ime = ime;

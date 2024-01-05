@@ -5,3 +5,13 @@ C:\Users\Mateo\source\repos\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csp
 C:\Users\Mateo\source\repos\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CoreCompileInputs.cache
 C:\Users\Mateo\source\repos\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.exe
 C:\Users\Mateo\source\repos\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.pdb
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.exe.config
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.exe
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.pdb
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Model.dll
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Model.pdb
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.AssemblyReference.cache
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CopyComplete
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.exe
+C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.pdb
