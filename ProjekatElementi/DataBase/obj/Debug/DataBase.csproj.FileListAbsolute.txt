@@ -8,3 +8,14 @@ C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CopyComplete
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.exe
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.pdb
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.exe.config
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.exe
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.pdb
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.dll
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.pdb
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CopyComplete
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.exe
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.pdb

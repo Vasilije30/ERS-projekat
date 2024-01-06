@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Model
 {
-    class Podrucje
+    public class Podrucje
     {
 
         public int Sifra { get; set; }

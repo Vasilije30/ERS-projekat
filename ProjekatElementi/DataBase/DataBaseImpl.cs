@@ -163,7 +163,7 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "UPDATE aud SET Datum=@Datump,Oblast=@Oblastp,Sat=@Satp, Prog=@Progp, Odstupanje=@Odstupanjep, Load=@Loadp WHERE Ime = @Imep";
+                command.CommandText = "UPDATE potrosnja SET Datum=@Datump,Oblast=@Oblastp,Sat=@Satp, Prog=@Progp, Odstupanje=@Odstupanjep, Load=@Loadp WHERE Ime = @Imep";
                 command.Parameters.AddWithValue("@Datump", potrosnja.Datum);
                 command.Parameters.AddWithValue("@Oblastp", potrosnja.Oblast);
                 command.Parameters.AddWithValue("@Satp", potrosnja.Sat);
@@ -219,21 +219,89 @@ namespace DataBase
 
         }
 
+        public void UbaciPodrucje(Podrucje podrucje)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = connection;
+                command.CommandText = "INSERT INTO podrucja(sifra, ime, sirina) VALUES(@Sifra, @Ime, @Sirina)";
+
+                command.Parameters.AddWithValue("@Sifra", podrucje.Sifra);
+                command.Parameters.AddWithValue("@Ime", podrucje.Ime);
+                command.Parameters.AddWithValue("@Sirina", podrucje.Sirina);
+
+                int result = command.ExecuteNonQuery();
+
+                if (result != 0)
+                {
+                    Console.WriteLine("Uspesno ubacen u bazu");
+                }
+                else
+                {
+                    Console.WriteLine("Nismo uspeli da upisemo u bazu");
+                }
+            }
+        }
 
 
+        public void UpdatePodrucje(Podrucje podrucje)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = connection;
+                command.CommandText = "UPDATE podrucja SET sifra=@sifraPodrucja, ime=@imePodrucja,sirina=@sirinaPodrucja, WHERE sifra = @sifra_podrucja";
+                command.Parameters.AddWithValue("@sifra", podrucje.Sifra);
+                command.Parameters.AddWithValue("@ime", podrucje.Ime);
+                command.Parameters.AddWithValue("@sirina", podrucje.Sirina);
+
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void ObrisiPodrucje(int sifra)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM podrucja WHERE sifra = @sifraPodrucja";
+                command.Parameters.AddWithValue("@sifraPodrucja", sifra);
+                command.ExecuteNonQuery();
+            }
+        }
+
+        public void ObrisiSvaPodrucja()
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                command.Connection = connection;
+                command.CommandText = "DELETE FROM podrucja";
+                command.ExecuteNonQuery();
+            }
+        }
 
 
+        public List<Podrucje> VratiPodrucje()
+        {
 
+            using (SqlCommand command = new SqlCommand())
+            {
+                List<Podrucje> podrucja = new List<Podrucje>();
+                command.Connection = connection;
+                command.CommandText = "SELECT all FROM podrucja";
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Podrucje podrucje = new Podrucje(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2));
+                        podrucja.Add(podrucje);
+                    }
+                    return podrucja;
+                }
 
+            }
 
-
-
-
-
-
-
-
+        }
 
     }
-
 }
+

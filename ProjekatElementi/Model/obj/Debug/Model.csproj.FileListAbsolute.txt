@@ -4,3 +4,9 @@ C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Mo
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.dll
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.pdb
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
+C:\Users\Ceta\Desktop\OVDE RADI KLOSARU\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb
