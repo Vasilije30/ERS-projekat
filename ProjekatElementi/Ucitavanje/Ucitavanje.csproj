@@ -46,10 +46,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Fajlovi.cs" />
-    <Compile Include="IUcitavanje.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UcitavanjeImpl.cs" />
+    <Compile Include="Ucitavanje.cs" />
+    <Compile Include="UcitavanjeCSV.cs" />
+    <Compile Include="UcitavanjeTXT.cs" />
+    <Compile Include="UcitavanjeXML.cs" />
+    <Compile Include="UIHandler.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

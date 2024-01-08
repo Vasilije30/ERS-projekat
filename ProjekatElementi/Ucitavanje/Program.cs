@@ -6,6 +6,8 @@ using System.Threading.Tasks;
 using System.ServiceModel;
 using System.Runtime.Serialization;
 using Model;
+using ConsoleApp14;
+using System.IO;
 
 namespace Ucitavanje
 {
@@ -14,11 +16,13 @@ namespace Ucitavanje
         static void Main(string[] args)
         {
             ChannelFactory<IModel> channel =
-                new ChannelFactory<IModel>("ServiceName");
+                 new ChannelFactory<IModel>("ServiceName");
 
-            IModel proxy = channel.CreateChannel();
+             IModel proxy = channel.CreateChannel();
 
-            Console.ReadLine();
+             Console.ReadLine();
+             UIHandler handler = new UIHandler();
+             handler.meni();
         }
     }
 

@@ -29,7 +29,7 @@ namespace DataBase
 
             try
             {
-                connectionString = "Server=localhost;Database=projekat;Trusted_Connection=True;";
+                connectionString = "Server=localhost;Database=ProjekatERS;Trusted_Connection=True;";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
@@ -47,12 +47,12 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO aud(ImeF, Vreme, Lokacija, BrojR) VALUES(@ImeFajla, @VremeUcitavanja, @Lokacija, @BrojRedova)";
+                command.CommandText = "INSERT INTO aud(ImeF, VremeF, Lokacija, Broj) VALUES(@ImeFajla, @Vreme, @Lokacija, @Br_Redova)";
 
                 command.Parameters.AddWithValue("@ImeFajla", audit.Ime);
-                command.Parameters.AddWithValue("@VremeUcitavanja", audit.Vreme);
+                command.Parameters.AddWithValue("@Vreme", audit.Vreme);
                 command.Parameters.AddWithValue("@Lokacija", audit.Lokacija);
-                command.Parameters.AddWithValue("@BrojRedova", audit.Br_Redova);
+                command.Parameters.AddWithValue("@Br_Redova", audit.Br_Redova);
 
 
                 int result = command.ExecuteNonQuery();
@@ -66,8 +66,6 @@ namespace DataBase
                     Console.WriteLine("Nismo uspeli da upisemo u bazu");
                 }
             }
-
-
         }
 
 
@@ -141,7 +139,6 @@ namespace DataBase
                 command.Parameters.AddWithValue("@Satp", potrosnja.Sat);
                 command.Parameters.AddWithValue("@Progp", potrosnja.OstvarenaIliPrognozirana);
                 command.Parameters.AddWithValue("@Odstupanjep", potrosnja.Odstupanje);
-                command.Parameters.AddWithValue("@Imep", potrosnja.Ime);
                 command.Parameters.AddWithValue("@Loadp", potrosnja.Load);
 
                 int result = command.ExecuteNonQuery();
@@ -209,7 +206,7 @@ namespace DataBase
                 {
                     while (reader.Read())
                     {
-                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetString(1), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetInt32(5), reader.GetFloat(6));
+                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetInt32(5), reader.GetFloat(6));
                         potrosnje.Add(potrosnja);
                     }
                     return potrosnje;

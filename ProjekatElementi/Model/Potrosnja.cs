@@ -14,16 +14,14 @@ namespace Model
         [DataMember]
         public DateTime Datum { get; set; }
         [DataMember]
-        public String Ime { get; set; }
-        [DataMember]
         public int Sat { get; set; }
         [DataMember]
-        public int Load { get; set; }
+        public double Load { get; set; }
         [DataMember]
         public String Oblast { get; set; }
-        //1 ostvarena, 0 prognozirana
         [DataMember]
         public int OstvarenaIliPrognozirana { get; set; }
+        //1 ostvarena, 0 prognozirana
         [DataMember]
         public float Odstupanje { get; set; }
 
@@ -31,10 +29,9 @@ namespace Model
         {
 
         }
-        public Potrosnja(DateTime datum, string ime, int sat, int load, string oblast, int ostvarenaIliPrognozirana, float odstupanje)
+        public Potrosnja(DateTime datum, int sat, double load, string oblast, int ostvarenaIliPrognozirana, float odstupanje)
         {
             Datum = datum;
-            Ime = ime;
             Sat = sat;
             Load = load;
             Oblast = oblast;
@@ -47,7 +44,7 @@ namespace Model
         public override string ToString()
         {
             string pomoc = "";
-            if(OstvarenaIliPrognozirana==1)
+            if(OstvarenaIliPrognozirana== 1)
             {
                 pomoc = "Ostvarena";
             }
@@ -55,7 +52,7 @@ namespace Model
             {
                 pomoc = "Prognozirana";
             }
-            return $"{Datum},{Ime},{Sat},{Load},{Oblast},{Odstupanje},{pomoc}";
+            return $"{Datum},{Sat},{Load},{Oblast},{Odstupanje},{pomoc}";
         }
 
     }

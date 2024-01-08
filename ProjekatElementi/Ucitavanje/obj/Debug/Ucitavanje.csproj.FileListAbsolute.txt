@@ -15,3 +15,14 @@ C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Deb
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CopyComplete
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.exe
 C:\Users\Mateo\Desktop\Projekat\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.pdb
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.exe.config
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.exe
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Ucitavanje.pdb
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Model.dll
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\Model.pdb
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.AssemblyReference.cache
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.SuggestedBindingRedirects.cache
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CoreCompileInputs.cache
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CopyComplete
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.exe
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.pdb
