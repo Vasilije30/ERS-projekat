@@ -26,3 +26,6 @@ C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\D
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.csproj.CopyComplete
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.exe
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\obj\Debug\Ucitavanje.pdb
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\DataBase.exe
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\DataBase.pdb
+C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Ucitavanje\bin\Debug\DataBase.exe.config

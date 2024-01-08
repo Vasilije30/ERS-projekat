@@ -5,6 +5,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DataBase;
 
 namespace Ucitavanje
 {
@@ -47,9 +48,9 @@ namespace Ucitavanje
 
 
             Console.WriteLine($"Nevalidan fajl: {imeFajla}, Lokacija: {putanja}, Broj redova: {brojRedova}");
-            UpisiUBazuAudit(auditZapis);
+            DataBaseImpl baza = new DataBaseImpl();
+            baza.UbaciAudit(auditZapis);
         }
         public abstract void UpisiUBazuPotrosnja(Potrosnja potrosnja);
-        public abstract void UpisiUBazuAudit(Audit audit);
     }
 }

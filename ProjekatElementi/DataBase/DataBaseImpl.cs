@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DataBase
 {
-    class DataBaseImpl:IDataBase
+    public class DataBaseImpl:IDataBase
     {
         private static SqlConnection connection;
         private static string connectionString;
@@ -22,7 +22,6 @@ namespace DataBase
             }
             return instance;
         }
-
 
         public DataBaseImpl()
         {
@@ -132,14 +131,14 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO potrosnja(Datum, Oblast, Sat, Prog, Odstupanje, Ime, Load) VALUES(@Datump, @Oblastp, @Satp, @Progp, @Odstupanjep, @Imep, @Loadp)";
+                command.CommandText = "INSERT INTO potrosnja(Datum, Sat, load, oblast, ostvIliProg, odstupanje) VALUES(@Datump, @Satp, @loadp,  @Oblastp, @ostvIliProg, @odstupanje)";
 
                 command.Parameters.AddWithValue("@Datump", potrosnja.Datum);
-                command.Parameters.AddWithValue("@Oblastp", potrosnja.Oblast);
                 command.Parameters.AddWithValue("@Satp", potrosnja.Sat);
-                command.Parameters.AddWithValue("@Progp", potrosnja.OstvarenaIliPrognozirana);
-                command.Parameters.AddWithValue("@Odstupanjep", potrosnja.Odstupanje);
                 command.Parameters.AddWithValue("@Loadp", potrosnja.Load);
+                command.Parameters.AddWithValue("@Oblastp", potrosnja.Oblast);
+                command.Parameters.AddWithValue("@ostvIliProg", potrosnja.OstvarenaIliPrognozirana);
+                command.Parameters.AddWithValue("@odstupanje", potrosnja.Odstupanje);
 
                 int result = command.ExecuteNonQuery();
 

@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using DataBase;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
@@ -7,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+
 
 namespace Ucitavanje
 {
@@ -87,36 +89,10 @@ namespace Ucitavanje
                 UpisiUBazuPotrosnja(novaPotrosnja);
             }
         }
-
-        public override void UpisiUBazuAudit(Audit audit)
-        {
-            using (SqlCommand command = new SqlCommand())
-            {
-                command.Connection = connection;
-                command.CommandText = "INSERT INTO aud(ImeF, Vreme, Lokacija, BrojR) VALUES(@ImeFajla, @VremeUcitavanja, @Lokacija, @BrojRedova)";
-
-                command.Parameters.AddWithValue("@ImeFajla", audit.Ime);
-                command.Parameters.AddWithValue("@VremeUcitavanja", audit.Vreme);
-                command.Parameters.AddWithValue("@Lokacija", audit.Lokacija);
-                command.Parameters.AddWithValue("@BrojRedova", audit.Br_Redova);
-
-
-                int result = command.ExecuteNonQuery();
-
-                if (result != 0)
-                {
-                    Console.WriteLine("Uspesno ubacen u bazu");
-                }
-                else
-                {
-                    Console.WriteLine("Nismo uspeli da upisemo u bazu");
-                }
-            }
-        }
-
         public override void UpisiUBazuPotrosnja(Potrosnja potrosnja)
         {
-            Console.WriteLine();
+            DataBaseImpl baza = new DataBaseImpl();
+            baza.UbaciPotrosnju(potrosnja);
         }
 
         public override bool ValidirajSadrzaj(string putanja, out int brojRedova)

@@ -1,4 +1,5 @@
-﻿using Model;
+﻿using DataBase;
+using Model;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -84,14 +85,10 @@ namespace Ucitavanje
             }
         }
 
-        public override void UpisiUBazuAudit(Audit audit)
-        {
-            Console.WriteLine();
-        }
-
         public override void UpisiUBazuPotrosnja(Potrosnja potrosnja)
         {
-            Console.WriteLine();
+            DataBaseImpl baza = new DataBaseImpl();
+            baza.UbaciPotrosnju(potrosnja);
         }
 
         public override bool ValidirajSadrzaj(string putanja, out int BrojRedova)
