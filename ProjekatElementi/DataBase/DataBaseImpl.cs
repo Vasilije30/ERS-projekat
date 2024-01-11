@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DataBase
-{
+{ 
     public class DataBaseImpl:IDataBase
     {
         private static SqlConnection connection;
@@ -205,7 +205,7 @@ namespace DataBase
                 {
                     while (reader.Read())
                     {
-                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetBoolean(5), reader.GetFloat(6));
+                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetInt32(5), reader.GetFloat(6));
                         potrosnje.Add(potrosnja);
                     }
                     return potrosnje;
@@ -304,7 +304,7 @@ namespace DataBase
             {
                 List<Potrosnja> potrosnje = new List<Potrosnja>();
                 command.Connection = connection;
-                command.CommandText = "SELECT Sat, PPotrosnja FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 1";
+                command.CommandText = "SELECT Sat, PPotrosnja FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 0";
                 command.Parameters.AddWithValue("@datum", datum);
                 command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
 
@@ -322,7 +322,7 @@ namespace DataBase
                         p.Load = PPotrosnja;
                         p.Oblast = geoOblast;
                         p.Datum = datum;
-                        p.OstvarenaIliPrognozirana = true;
+                        p.OstvarenaIliPrognozirana = 0;
                         potrosnje.Add(p);
                     }
                     return potrosnje;
@@ -337,7 +337,7 @@ namespace DataBase
             {
                 List<Potrosnja> potrosnje = new List<Potrosnja>();
                 command.Connection = connection;
-                command.CommandText = "SELECT Sat,  FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 0";
+                command.CommandText = "SELECT Sat,  FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 1";
                 command.Parameters.AddWithValue("@datum", datum);
                 command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
 
@@ -355,7 +355,7 @@ namespace DataBase
                         p.Load = OPotrosnja;
                         p.Oblast = geoOblast;
                         p.Datum = datum;
-                        p.OstvarenaIliPrognozirana = true;
+                        p.OstvarenaIliPrognozirana = 1;
                         potrosnje.Add(p);
                     }
                     return potrosnje;

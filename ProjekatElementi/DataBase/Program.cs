@@ -22,7 +22,7 @@ namespace DataBase
 
             ServiceHost host1 = new ServiceHost(typeof(ServiceIspis));
 
-            host1.AddServiceEndpoint(typeof(IIspis)
+            host1.AddServiceEndpoint(typeof(IIspis),
     
                      new NetTcpBinding(),
                    new Uri("net.tcp://localhost:4001/IIspis"));
