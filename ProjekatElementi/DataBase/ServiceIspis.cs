@@ -8,7 +8,7 @@ using Model;
 
 namespace DataBase
 {
-    class ServiceIspis : IIspis
+    class ServiceIspis : IDrugaTacka
     {
         DataBaseImpl baza = DataBaseImpl.getBase();
         public List<List<Potrosnja>> Izracunaj(DateTime datum, string GeoPodrucje)

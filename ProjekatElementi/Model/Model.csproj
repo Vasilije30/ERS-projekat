@@ -44,11 +44,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Audit.cs" />
+    <Compile Include="IDrugaTacka.cs" />
+    <Compile Include="IEvidencija.cs" />
     <Compile Include="IIspis.cs" />
     <Compile Include="IModel.cs" />
     <Compile Include="Odstupanje.cs" />
     <Compile Include="Podrucje.cs" />
     <Compile Include="Potrosnja.cs" />
+    <Compile Include="PotrosnjaIspis.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

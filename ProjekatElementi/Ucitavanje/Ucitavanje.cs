@@ -11,6 +11,7 @@ namespace Ucitavanje
 {
     public abstract class Ucitavanje
     {
+        public IModel Proxy { get; set; }
         public abstract void ObradaFajla(string putanja);
         public bool ValidirajImeFajla(string imeFajla, out string tipFajla, out DateTime datum)
         {
@@ -48,9 +49,11 @@ namespace Ucitavanje
 
 
             Console.WriteLine($"Nevalidan fajl: {imeFajla}, Lokacija: {putanja}, Broj redova: {brojRedova}");
-            DataBaseImpl baza = new DataBaseImpl();
-            baza.UbaciAudit(auditZapis);
+            Proxy.posaljiAuditFajl(auditZapis);
         }
-        public abstract void UpisiUBazuPotrosnja(Potrosnja potrosnja);
+        public  void UpisiUBazuPotrosnja(Potrosnja potrosnja)
+        {
+            Proxy.poslajiFajl(potrosnja);
+        }
     }
 }

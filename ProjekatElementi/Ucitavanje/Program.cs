@@ -20,9 +20,11 @@ namespace Ucitavanje
 
              IModel proxy = channel.CreateChannel();
 
+            UIHandler ui = new UIHandler(proxy);
+            ui.meni();
+                
              Console.ReadLine();
-             UIHandler handler = new UIHandler();
-             handler.meni();
+        
         }
     }
 

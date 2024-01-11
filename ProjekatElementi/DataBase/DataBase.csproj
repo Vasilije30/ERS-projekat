@@ -45,12 +45,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CitanjeServis.cs" />
     <Compile Include="DataBaseImpl.cs" />
     <Compile Include="IDataBase.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Server.cs" />
     <Compile Include="ServiceIspis.cs" />
+    <Compile Include="ServisPodrucja.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

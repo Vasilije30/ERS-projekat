@@ -16,5 +16,10 @@ namespace Model
 
         [OperationContract]
         void posaljiAuditFajl(Audit audit);
+        [OperationContract]
+        List<string> GeoPodr();
+
+        [OperationContract]
+        void upisiOblast(Podrucje geo);
     }
 }

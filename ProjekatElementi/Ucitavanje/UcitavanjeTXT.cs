@@ -11,7 +11,9 @@ namespace Ucitavanje
 {
     public class UcitavanjeTXT : Ucitavanje
     {
-        public UcitavanjeTXT() { }
+        public UcitavanjeTXT(IModel proxy) {
+            Proxy = proxy;
+        }
         public override void ObradaFajla(string putanja)
         {
             Console.WriteLine($"Obrada TXT fajla na putanji: {putanja}");
@@ -61,7 +63,14 @@ namespace Ucitavanje
 
                     continue;
                 }
-
+                List<string> lista = Proxy.GeoPodr();
+                if (!lista.Contains(delovi[2]))
+                {
+                    Podrucje geo = new Podrucje();
+                    geo.Sifra = delovi[2];
+                    geo.Ime = delovi[2];
+                    Proxy.upisiOblast(geo);
+                }
                 string geografskaOblast = delovi[2];
 
                 int OstvarenaIliPrognozirana = 0;
@@ -85,12 +94,7 @@ namespace Ucitavanje
             }
         }
 
-        public override void UpisiUBazuPotrosnja(Potrosnja potrosnja)
-        {
-            DataBaseImpl baza = new DataBaseImpl();
-            baza.UbaciPotrosnju(potrosnja);
-        }
-
+       
         public override bool ValidirajSadrzaj(string putanja, out int BrojRedova)
         {
             BrojRedova = 0;

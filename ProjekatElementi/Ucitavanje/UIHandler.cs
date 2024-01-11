@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Model;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,11 +15,11 @@ namespace ConsoleApp14
         public static UcitavanjeTXT obradaTxt;
         public static UcitavanjeXML obradaXML;
 
-        public UIHandler()
+        public UIHandler(IModel proxy)
         {
-            obradaCsv = new UcitavanjeCSV();
-            obradaTxt = new UcitavanjeTXT();
-            obradaXML = new UcitavanjeXML();
+            obradaCsv = new UcitavanjeCSV(proxy);
+            obradaTxt = new UcitavanjeTXT(proxy);
+            obradaXML = new UcitavanjeXML(proxy);
         }   
         public void meni()
         {

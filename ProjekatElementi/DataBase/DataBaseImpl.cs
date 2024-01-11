@@ -28,7 +28,7 @@ namespace DataBase
 
             try
             {
-                connectionString = "Server=localhost;Database=master;Trusted_Connection=True;";
+                connectionString = "Server=localhost;Database=projekat;Trusted_Connection=True;";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
@@ -46,7 +46,7 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO aud(ImeF, VremeF, Lokacija, Broj) VALUES(@ImeFajla, @Vreme, @Lokacija, @Br_Redova)";
+                command.CommandText = "INSERT INTO aud(ImeF, Vreme, Lokacija, BrojR) VALUES(@ImeFajla, @Vreme, @Lokacija, @Br_Redova)";
 
                 command.Parameters.AddWithValue("@ImeFajla", audit.Ime);
                 command.Parameters.AddWithValue("@Vreme", audit.Vreme);
@@ -131,7 +131,7 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO potrosnja(Datum, Sat, load, oblast, ostvIliProg, odstupanje) VALUES(@Datump, @Satp, @loadp,  @Oblastp, @ostvIliProg, @odstupanje)";
+                command.CommandText = "INSERT INTO Potr (Datum, Sat, Loadl, Oblast, Prog, Odstupanje) VALUES(@Datump, @Satp, @loadp,  @Oblastp, @ostvIliProg, @odstupanje)";
 
                 command.Parameters.AddWithValue("@Datump", potrosnja.Datum);
                 command.Parameters.AddWithValue("@Satp", potrosnja.Sat);
@@ -220,7 +220,7 @@ namespace DataBase
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = connection;
-                command.CommandText = "INSERT INTO podrucja(sifra, ime, sirina) VALUES(@Sifra, @Ime, @Sirina)";
+                command.CommandText = "INSERT INTO oblast(sifra, ime) VALUES(@Sifra, @Ime)";
 
                 command.Parameters.AddWithValue("@Sifra", podrucje.Sifra);
                 command.Parameters.AddWithValue("@Ime", podrucje.Ime);
@@ -288,7 +288,7 @@ namespace DataBase
                 {
                     while (reader.Read())
                     {
-                        Podrucje podrucje = new Podrucje(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2));
+                        Podrucje podrucje = new Podrucje(reader.GetString(0), reader.GetString(1), reader.GetInt32(2));
                         podrucja.Add(podrucje);
                     }
                     return podrucja;
@@ -304,9 +304,9 @@ namespace DataBase
             {
                 List<Potrosnja> potrosnje = new List<Potrosnja>();
                 command.Connection = connection;
-                command.CommandText = "SELECT Sat, PPotrosnja FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 0";
+                command.CommandText = "SELECT Sat,Loadl PPotrosnja FROM Potr where Datum = @datum and Oblast = @oblast and Prog = 0";
                 command.Parameters.AddWithValue("@datum", datum);
-                command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
+                command.Parameters.AddWithValue("@oblast", geoOblast);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -337,9 +337,9 @@ namespace DataBase
             {
                 List<Potrosnja> potrosnje = new List<Potrosnja>();
                 command.Connection = connection;
-                command.CommandText = "SELECT Sat,  FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 1";
+                command.CommandText = "SELECT Sat,Loadl  FROM Potr where Datum = @datum and Oblast = @oblast and Prog = 1";
                 command.Parameters.AddWithValue("@datum", datum);
-                command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
+                command.Parameters.AddWithValue("@oblast", geoOblast);
 
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
@@ -363,18 +363,18 @@ namespace DataBase
 
             }
         }
-        public List<Podrucje> evidencijaGeoPodrucja(string Ime, int Sirina)
+        public List<Podrucje> evidencijaGeoPodrucja()
         {
             using (SqlCommand command = new SqlCommand())
             {
                 List<Podrucje> oblasti = new List<Podrucje>();
                 command.Connection = connection;
-                command.CommandText = "SELECT all FROM podrucje";
+                command.CommandText = "SELECT Ime,sifra  FROM oblast";
                 using (SqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        Podrucje GOblast = new Podrucje(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2));
+                        Podrucje GOblast = new Podrucje(reader.GetString(0), reader.GetString(1), 0);
                         oblasti.Add(GOblast);
                     }
                     return oblasti;

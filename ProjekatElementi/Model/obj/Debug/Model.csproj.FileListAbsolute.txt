@@ -22,3 +22,9 @@ C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj
 C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
 C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.dll
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.pdb
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb
+C:\Users\Mateo\Desktop\clone\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.AssemblyReference.cache

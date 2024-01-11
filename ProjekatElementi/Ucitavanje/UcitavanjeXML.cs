@@ -14,7 +14,9 @@ namespace Ucitavanje
     public class UcitavanjeXML : Ucitavanje
     {
         public static SqlConnection connection;
-        public UcitavanjeXML() { }
+        public UcitavanjeXML(IModel proxy) {
+            Proxy = proxy;
+        }
         public override void ObradaFajla(string putanja)
         {
             Console.WriteLine($"Obrada XML fajla na putanji: {putanja}");
@@ -51,20 +53,36 @@ namespace Ucitavanje
                 int sat = int.Parse(red.Element("SAT").Value);
                 double potrosnja = double.Parse(red.Element("LOAD").Value);
                 string geografskaOblast = red.Element("OBLAST").Value;
-
+                List<string> lista = Proxy.GeoPodr();
+                if (!lista.Contains(geografskaOblast))
+                {
+                    Podrucje geo = new Podrucje();
+                    geo.Sifra = geografskaOblast;
+                    geo.Ime = geografskaOblast;
+                    Proxy.upisiOblast(geo);
+                }
                 int OstvarenaIliPrognozirana = 0;
                 double Potrosnja = 0;
+                Console.WriteLine();
+                Console.WriteLine(tipFajla);
 
-                if (tipFajla == "prog")
+                switch (tipFajla.Trim())
                 {
-                    OstvarenaIliPrognozirana = 0;
-                    Potrosnja = potrosnja;
+                    case "prog": {
+                            OstvarenaIliPrognozirana = 0;
+                            Potrosnja = potrosnja;
+                            break;
+                        }
+                    case "ostv": {
+                            OstvarenaIliPrognozirana = 1;
+                            Potrosnja = potrosnja;
+                            break;
+                        }
+                    default:
+                        break;
                 }
-                else if (tipFajla == "ostv")
-                {
-                    OstvarenaIliPrognozirana = 1;
-                    Potrosnja = potrosnja;
-                }
+
+               
 
                 Potrosnja novaPotrosnja = new Potrosnja(datum, sat, Potrosnja, geografskaOblast, OstvarenaIliPrognozirana, 0);
                 Console.WriteLine(novaPotrosnja);
@@ -73,11 +91,7 @@ namespace Ucitavanje
             }
         }
 
-        public override void UpisiUBazuPotrosnja(Potrosnja potrosnja)
-        {
-            DataBaseImpl baza = new DataBaseImpl();
-            baza.UbaciPotrosnju(potrosnja);
-        }
+        
 
         public override bool ValidirajSadrzaj(string putanja, out int brojRedova)
         {
