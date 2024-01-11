@@ -13,19 +13,23 @@ namespace DataBase
     {
         static void Main(string[] args)
         {
-            /*
-            using (ServiceHost host = new ServiceHost(typeof(Server)))
-            {
-                host.Open();
-                Console.WriteLine("Servis je uspjesno pokrenut");
-                Console.ReadKey();
-            }
-            */
+            ServiceHost host = new ServiceHost(typeof(DataBaseImpl));
 
-            DataBaseImpl baza = DataBaseImpl.getBase();
-            Audit audit = new Audit(new DateTime(2019,10,10), "nesto", "nekalok", 32);
-            baza.UbaciAudit(audit);
-            Console.ReadLine();
+            host.AddServiceEndpoint(typeof(IModel), new NetTcpBinding(), new Uri("net.tcp://localhost:4000/IEvidencija"));
+            host.Open();
+            Console.WriteLine("Servis1 je uspesno pokrenut");
+
+
+            ServiceHost host1 = new ServiceHost(typeof(ServiceIspis));
+
+            host1.AddServiceEndpoint(typeof(IIspis)
+    
+                     new NetTcpBinding(),
+                   new Uri("net.tcp://localhost:4001/IIspis"));
+
+            host1.Open();
+            Console.WriteLine("Servis2 je uspesno pokrenut");
+            Console.ReadKey();
         }
     }
 }

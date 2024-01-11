@@ -28,7 +28,7 @@ namespace DataBase
 
             try
             {
-                connectionString = "Server=localhost;Database=ProjekatERS;Trusted_Connection=True;";
+                connectionString = "Server=localhost;Database=master;Trusted_Connection=True;";
                 connection = new SqlConnection(connectionString);
                 connection.Open();
 
@@ -205,7 +205,7 @@ namespace DataBase
                 {
                     while (reader.Read())
                     {
-                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetInt32(5), reader.GetFloat(6));
+                        Potrosnja potrosnja = new Potrosnja(reader.GetDateTime(0), reader.GetInt32(2), reader.GetInt32(3), reader.GetString(4), reader.GetBoolean(5), reader.GetFloat(6));
                         potrosnje.Add(potrosnja);
                     }
                     return potrosnje;
@@ -297,7 +297,91 @@ namespace DataBase
             }
 
         }
+        public List<Potrosnja> ProgGeoPodrucje(DateTime datum, string geoOblast)
+        {
+            // okvirno prekucano jer nemam bazu prepraviti na kompu tacno imena
+            using (SqlCommand command = new SqlCommand())
+            {
+                List<Potrosnja> potrosnje = new List<Potrosnja>();
+                command.Connection = connection;
+                command.CommandText = "SELECT Sat, PPotrosnja FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 1";
+                command.Parameters.AddWithValue("@datum", datum);
+                command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
 
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+
+                        int Sat = reader.GetInt32(0);
+                        float PPotrosnja = (float)reader.GetDouble(1);
+
+                        Potrosnja p = new Potrosnja();
+                        p.Sat = Sat;
+                        p.Load = PPotrosnja;
+                        p.Oblast = geoOblast;
+                        p.Datum = datum;
+                        p.OstvarenaIliPrognozirana = true;
+                        potrosnje.Add(p);
+                    }
+                    return potrosnje;
+                }
+
+            }
+        }
+        public List<Potrosnja> OstvGeoPodrucje(DateTime datum, string geoOblast)
+        {
+
+            using (SqlCommand command = new SqlCommand())
+            {
+                List<Potrosnja> potrosnje = new List<Potrosnja>();
+                command.Connection = connection;
+                command.CommandText = "SELECT Sat,  FROM potrosnja where Datum = @datum and GeografskaOblast = @oblast and OstvarenaIliPrognozirana = 0";
+                command.Parameters.AddWithValue("@datum", datum);
+                command.Parameters.AddWithValue("@GeografskaOblast", geoOblast);
+
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+
+                    while (reader.Read())
+                    {
+
+                        int Sat = reader.GetInt32(0);
+                        float OPotrosnja = (float)reader.GetDouble(1);
+
+                        Potrosnja p = new Potrosnja();
+                        p.Sat = Sat;
+                        p.Load = OPotrosnja;
+                        p.Oblast = geoOblast;
+                        p.Datum = datum;
+                        p.OstvarenaIliPrognozirana = true;
+                        potrosnje.Add(p);
+                    }
+                    return potrosnje;
+                }
+
+            }
+        }
+        public List<Podrucje> evidencijaGeoPodrucja(string Ime, int Sirina)
+        {
+            using (SqlCommand command = new SqlCommand())
+            {
+                List<Podrucje> oblasti = new List<Podrucje>();
+                command.Connection = connection;
+                command.CommandText = "SELECT all FROM podrucje";
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Podrucje GOblast = new Podrucje(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2));
+                        oblasti.Add(GOblast);
+                    }
+                    return oblasti;
+                }
+                    
+            }
+        }
     }
 }
 

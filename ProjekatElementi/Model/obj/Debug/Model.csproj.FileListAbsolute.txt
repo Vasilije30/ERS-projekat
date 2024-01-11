@@ -16,3 +16,9 @@ C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Model\obj\Debug\
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.dll
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\bin\Debug\Model.pdb
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.AssemblyReference.cache
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.dll
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\Model\obj\Debug\Model.pdb

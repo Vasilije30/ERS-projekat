@@ -20,7 +20,7 @@ namespace Model
         [DataMember]
         public String Oblast { get; set; }
         [DataMember]
-        public int OstvarenaIliPrognozirana { get; set; }
+        public bool OstvarenaIliPrognozirana { get; set; }
         //1 ostvarena, 0 prognozirana
         [DataMember]
         public float Odstupanje { get; set; }
@@ -29,7 +29,7 @@ namespace Model
         {
 
         }
-        public Potrosnja(DateTime datum, int sat, double load, string oblast, int ostvarenaIliPrognozirana, float odstupanje)
+        public Potrosnja(DateTime datum, int sat, double load, string oblast, bool ostvarenaIliPrognozirana, float odstupanje)
         {
             Datum = datum;
             Sat = sat;
@@ -44,7 +44,7 @@ namespace Model
         public override string ToString()
         {
             string pomoc = "";
-            if(OstvarenaIliPrognozirana== 1)
+            if(OstvarenaIliPrognozirana== true)
             {
                 pomoc = "Ostvarena";
             }

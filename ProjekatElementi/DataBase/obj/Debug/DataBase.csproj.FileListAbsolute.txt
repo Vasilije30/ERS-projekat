@@ -30,3 +30,13 @@ C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\DataBase\bin\Deb
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.dll
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.pdb
 C:\Users\Ceta\Desktop\ProjekatERS\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CopyComplete
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.exe.config
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.exe
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\DataBase.pdb
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.dll
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\bin\Debug\Model.pdb
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.AssemblyReference.cache
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CoreCompileInputs.cache
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.csproj.CopyComplete
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.exe
+C:\Users\vasko\OneDrive\Desktop\Projekat\ERS-projekat\ProjekatElementi\DataBase\obj\Debug\DataBase.pdb
