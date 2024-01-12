@@ -19,17 +19,17 @@ namespace Ucitavanje
         }
         public override void ObradaFajla(string putanja)
         {
-            Console.WriteLine($"Obrada XML fajla na putanji: {putanja}");
+            Console.WriteLine($"Obradjuje se XML fajl na putanji: {putanja}");
             string imeFajla = Path.GetFileNameWithoutExtension(putanja);
-            string tipFajla;
+            string tip;
             DateTime datum;
 
-            if (!ValidirajImeFajla(imeFajla, out tipFajla, out datum))
+            if (!ValidirajImeFajla(imeFajla, out tip, out datum))
             {
                 return;
             }
 
-            Console.WriteLine($"Tip Fajla: {tipFajla}, Datum: {datum}");
+            Console.WriteLine($"Tip Fajla: {tip}, Datum: {datum}");
             int brojRedova = 0;
 
 
@@ -40,7 +40,7 @@ namespace Ucitavanje
                 return;
             }
 
-            ObradiValidnePodatke(putanja, tipFajla, datum);
+            ObradiValidnePodatke(putanja, tip, datum);
         }
 
         public override void ObradiValidnePodatke(string putanja, string tipFajla, DateTime datum)

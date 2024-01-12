@@ -67,7 +67,7 @@ namespace Evidencija
             Console.WriteLine("Unesite sifru geo oblasti: ");
             geo.Sifra = Console.ReadLine();
 
-            Console.WriteLine("Unesite oblaime geo sti: ");
+            Console.WriteLine("Unesite ime geografske oblasti: ");
             geo.Ime = Console.ReadLine();
 
 

@@ -16,7 +16,7 @@ namespace Ucitavanje
         }
         public override void ObradaFajla(string putanja)
         {
-            Console.WriteLine($"Obrada TXT fajla na putanji: {putanja}");
+            Console.WriteLine($"Obradjuje se TXT fajl na putanji: {putanja}");
             string imeFajla = Path.GetFileNameWithoutExtension(putanja);
             string tipFajla;
             DateTime datum;
